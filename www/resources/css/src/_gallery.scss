@@ -1,0 +1,67 @@
+.section{
+    font-size:16px;
+    padding-bottom:20px;
+
+    .type{
+
+    }
+
+    .note{
+        @extend .font-italiana;
+        background:url($base-img-path+'/background-big-dot.png') no-repeat center left;
+        padding-left:7px;
+    }
+
+    .more{
+        font-size:12px;
+        margin-top:4px;
+        padding-top:4px;
+        @extend .dotted-line-top;
+        @extend .font-italiana;
+
+        &.arrow{
+            .context{
+                background:url($base-img-path + '/background-arrow-brown.png') no-repeat center left;
+                padding-left:19px;
+                padding-top:1px;
+            }
+        }
+    }
+}
+
+.gallery{
+    padding-bottom:20px;
+
+    .collection{
+        &.one-up{
+            height:443px;
+        }
+
+        &.two-up{
+            height:296px;
+            .image{
+                padding-right:4px;
+            }
+        }
+
+        &.three-up{
+            height:443px;
+            .image{
+                padding-right:2px;
+            }
+        }
+    }
+
+    .collection{
+        padding-bottom:4px;
+        clear:both;
+        .image{
+            float:left;
+            &.last{
+                padding-right:none;
+            }
+        }
+    }
+
+}
+

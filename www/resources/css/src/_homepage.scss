@@ -1,0 +1,18 @@
+.hero{
+
+    .context{
+        width:893px;
+        height:253px;
+        background:rgba(171, 163, 164, 0.33);
+        padding:4px;
+
+        @include corner(10px);
+
+        img{
+            @include corner(10px);
+        }
+    }
+    padding-bottom:21px;
+}
+
+
