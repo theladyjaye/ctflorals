@@ -1,7 +1,20 @@
 RewriteEngine On
 
-RewriteRule ^/?$ /views/index.html [L]
-RewriteRule ^about/?$ /views/about.html [L]
-RewriteRule ^gallery/?$ /views/gallery.html [L]
-RewriteRule ^testimonials/?$ /views/testimonials.html [L]
-RewriteRule .* /views/index.html [L]
+RewriteCond %{HTTP_HOST} ^(www\.)?ctflorals\.com [NC]
+RewriteRule ^(.*)$ http://www.catherinethoeleflorals.com/$1 [R,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?swoonflorals\.com [NC]
+RewriteRule ^(.*)$ http://www.catherinethoeleflorals.com/$1 [R,L]
+
+RewriteCond %{HTTP_HOST} ^catherinethoeleflorals\.com [NC]
+RewriteRule ^(.*)$ http://www.catherinethoeleflorals.com/$1 [R,L]
+
+RewriteRule ^/?$ views/index.html
+RewriteRule ^about/?$ views/about.html [L]
+RewriteRule ^gallery/?$ views/gallery.html [L]
+RewriteRule ^testimonials/?$ views/testimonials.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^.*$ http://www.catherinethoeleflorals.com [R,L]
