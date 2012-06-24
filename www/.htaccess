@@ -1,5 +1,7 @@
 RewriteEngine On
 
-RewriteRule ^/?about/? /about.html [L]
-RewriteRule ^/?gallery/? /gallery.html [L]
-RewriteRule ^/?testimonials/? /testimonials.html [L]
+RewriteRule ^/?$ /views/index.html [L]
+RewriteRule ^about/?$ /views/about.html [L]
+RewriteRule ^gallery/?$ /views/gallery.html [L]
+RewriteRule ^testimonials/?$ /views/testimonials.html [L]
+RewriteRule .* /views/index.html [L]
