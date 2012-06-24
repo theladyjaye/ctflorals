@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^/about/? /about.html [L]
+RewriteRule ^/gallery/? /gallery.html [L]
+RewriteRule ^/testimonials/? /testimonials.html [L]
