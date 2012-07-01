@@ -10,6 +10,6 @@ aventurella-apache2::module {'enable_apache_modules':
 aventurella-apache2::vhost {'ctflorals':
     docroot        => '/var/www/ctflorals',
     server_name    => 'ctflorals.com',
-    server_aliases => ['www.ctflorals.com'],
+    server_aliases => ['www.ctflorals.com', 'catherinethoeleflorals.com', 'www.catherinethoeleflorals.com'],
     allow_override => true,
 }
