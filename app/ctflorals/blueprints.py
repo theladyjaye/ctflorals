@@ -9,17 +9,21 @@ ctflorals = Blueprint('ctflorals', __name__,
                       template_folder='views',
                       static_folder='../resources')
 
+
 @ctflorals.route("/")
 def home():
     return HomeController().index()
+
 
 @ctflorals.route("/about/")
 def about():
     return AboutController().index()
 
+
 @ctflorals.route("/gallery/")
 def gallery():
     return GalleryController().index()
+
 
 @ctflorals.route("/testimonials/")
 def testimonials():

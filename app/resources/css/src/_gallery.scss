@@ -24,6 +24,10 @@
                 background:url($base-img-path + '/background-arrow-brown.png') no-repeat center left;
                 padding-left:19px;
                 padding-top:1px;
+
+                a{
+                    color:$default-color;
+                }
             }
         }
     }

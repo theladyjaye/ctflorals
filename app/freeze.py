@@ -1,8 +1,7 @@
 from flask import Flask
 from flask_frozen import Freezer
+
 from ctflorals.blueprints import ctflorals
-
-
 
 app = Flask(__name__)
 app.register_blueprint(ctflorals)
