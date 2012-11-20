@@ -24,7 +24,6 @@ def deploy():
     with cd('/home/ctflorals/app'):
         sudo('chown -R ubuntu:ubuntu .')
         run('git pull')
-        run('cp')
         run('sass --style compressed ./app/resources/css/src/styles.scss:./www/resources/css/styles.css')
         sudo('chown -R ctflorals:www-data .')
 
