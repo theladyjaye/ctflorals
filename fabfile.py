@@ -15,6 +15,7 @@ def sync():
     local('cp ./build/testimonials/index.html ./www/views/testimonials.html')
     with settings(warn_only=True):
         local('git commit -am "prep for production deploy"')
+        local('git push')
 
 
 @roles('production')
