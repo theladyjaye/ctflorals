@@ -1,4 +1,4 @@
-from fabric.api import cd, env, roles, task, run, sudo, local, lcd
+from fabric.api import cd, env, roles, task, run, sudo, local, lcd, settings
 
 
 env.roledefs = {'production': ['ubuntu@ctflorals.com']}
@@ -13,7 +13,8 @@ def sync():
     local('cp ./build/about/index.html ./www/views/about.html')
     local('cp ./build/gallery/index.html ./www/views/gallery.html')
     local('cp ./build/testimonials/index.html ./www/views/testimonials.html')
-    local('git commit -am "prep for production deploy"')
+    with settings(warn_only=True):
+        local('git commit -am "prep for production deploy"')
 
 
 @roles('production')
