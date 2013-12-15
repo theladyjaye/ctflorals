@@ -1,0 +1,18 @@
+{% macro view(model) -%}
+<div class="grid_6 logo">
+    <dl>
+        <dt class="name">Catherine Thoele, A.I.F.D.</dt>
+        <dd class="description">Wedding and Event Florals <span class="phone">314.368.1244</span></dd>
+    </dl>
+    </div>
+    <div class="grid_8 navigation">
+        <ul>
+            <li class="item about {{ model.navigation.about }}"><a class="action" href="{{ url_for("ctflorals.about") }}">About</a></li>
+            <li class="item testimonials {{ model.navigation.testimonials }}"><a class="action" href="{{ url_for("ctflorals.testimonials") }}">Testimonials</a></li>
+            <li class="item gallery {{ model.navigation.gallery }}"><a class="action" href="{{ url_for("ctflorals.gallery") }}">Gallery</a></li>
+            <li class="item home {{ model.navigation.home }}"><a class="action" href="{{ url_for("ctflorals.home") }}">Home</a></li>
+        </ul>
+    </div>
+<div class="clear"></div>
+{%- endmacro %}
+
